@@ -99,20 +99,19 @@ app.post('/admin/categorias/nova', async(req, res) => {
     res.redirect('/admin/categorias')
 })
 
-//app.get('/admin/vagas/editar/:id', async(req, res) => {
-//    const db = await dbConnection
-//    const categorias = await db.all('select * from categorias')
-//    const vaga = await db.get('select * from vagas where id = ' + req.params.id)
-//    res.render('admin/editar-vaga', { categorias, vaga })
-//})
+app.get('/admin/categorias/editar/:id', async(req, res) => {
+    const db = await dbConnection
+    const categoria = await db.get('select * from categorias where id = ' + req.params.id)
+    res.render('admin/editar-categoria', { categoria })
+})
 
-//app.post('/admin/vagas/editar/:id', async(req, res) => {
-//    const { titulo, descricao, categoria } = req.body
-//    const { id } = req.params
-//    const db = await dbConnection
-//    await db.run(`update vagas set categoria = ${categoria}, titulo = '${titulo}', descricao = '${descricao}' where id = ${id}`)
-//    res.redirect('/admin/vagas')
-//})
+app.post('/admin/categorias/editar/:id', async(req, res) => {
+    const { categoria } = req.body
+    const { id } = req.params
+    const db = await dbConnection
+    await db.run(`update categorias set categoria = '${categoria}' where id = ${id}`)
+    res.redirect('/admin/categorias')
+})
 
 const init = async() => {
     const db = await dbConnection
