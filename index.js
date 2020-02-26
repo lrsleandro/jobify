@@ -12,6 +12,14 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use('/admin', (req, res, next) => {
+    if(req.hostname === 'localhost'){
+        next()
+    } else {
+        res.send('Not allowed')
+    }
+})
+
 app.get('/', async(request, response) => {
     const db = await dbConnection
     const categoriasDB = await db.all('select * from categorias;')
