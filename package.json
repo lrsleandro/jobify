@@ -4,7 +4,7 @@
   "description": "Jobify is a simple job board for sites.",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "jobify",
@@ -17,12 +17,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lrsleandro/jobify.git"
+    "url": "git+https://github.com/lrsleandro/jobify.git"
   },
   "dependencies": {
+    "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "sqlite": "^3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/lrsleandro/jobify/issues"
+  },
+  "homepage": "https://github.com/lrsleandro/jobify#readme",
+  "devDependencies": {
+    "node-pre-gyp": "0.12.0"
   }
 }
