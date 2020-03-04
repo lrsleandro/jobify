@@ -4,19 +4,25 @@
   "description": "Jobify is a simple job board for sites.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.js"
   },
   "keywords": [
     "jobify",
     "job"
   ],
   "author": "Túlio Faria",
+  "contributors": [
+    "Leandro Ribeiro dos Santos"
+  ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lrsleandro/jobify.git"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "sqlite": "^3.0.3",
-    "zeit": "^1.3.0"
+    "sqlite": "^3.0.3"
   }
 }
