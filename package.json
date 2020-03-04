@@ -4,13 +4,13 @@
   "description": "Jobify is a simple job board for sites.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "jobify",
     "job"
   ],
-  "author": "Tulio Faria",
+  "author": "Túlio Faria",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
